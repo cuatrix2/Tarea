@@ -77,19 +77,19 @@
                     </div>
                     <div class="form-group">
                         <label for="Nombres">Nombres </label>
-                        <input type="text" class="form-control" id="Nombres" name="Nombres" placeholder="Nombres">
+                        <input type="text" class="form-control" id="Nombres" name="Nombres" placeholder="Nombres" required>
                     </div>
                     <div class="form-group">
                         <label for="Apellidos">Apellidos </label>
-                        <input type="text" class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos">
+                        <input type="text" class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos" required>
                     </div>
                     <div class="form-group">
                         <label for="Telefono">Telefono </label>
-                        <input type="text" class="form-control" id="Telefono" name="Telefono" placeholder="Telefono">
+                        <input type="text" class="form-control" id="Telefono" name="Telefono" placeholder="Telefono" required>
                     </div>
                     <div class="form-group">
                         <label for="Edad">Edad </label>
-                        <input type="text" class="form-control" id="Edad" name="Edad" placeholder="Edad">
+                        <input type="text" class="form-control" id="Edad" name="Edad" placeholder="Edad" required>
                     </div>
                     <div class="form-group">
                         <label for="Sexo">Sexo</label>
