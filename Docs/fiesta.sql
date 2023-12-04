@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2023 a las 03:56:10
+-- Tiempo de generación: 04-12-2023 a las 19:17:51
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -46,8 +46,7 @@ INSERT INTO `invitados` (`Id`, `Cedula`, `Nombres`, `Apellidos`, `Telefono`, `Ed
 (1, '1600095564', 'Margoth', 'Espinoza', '0998067505', '25', 'Femenino', 'margoth@123.com'),
 (2, '1600618381', 'Ariel ', 'Llerena', '0987701510', '23', 'Masculino', 'ariel@123.com'),
 (3, '152351562', 'Juan Perez', 'Sarmiento Jaramillo', '0998067505', '25', 'Masculino', 'juan@abc.com'),
-(38, '1600095564', 'das', 'dasd', '032792895', '25', 'Masculino', 'miranda@123.com'),
-(39, '1805059860', 'das', 'dasd', '', '25', 'Masculino', 'miranda@123.com');
+(40, '2300035421', 'Ariel', 'Jeampol', '099706505', '25', 'Masculino', 'miranda@123.com');
 
 -- --------------------------------------------------------
 
@@ -97,7 +96,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `invitados`
 --
 ALTER TABLE `invitados`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
