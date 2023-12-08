@@ -115,6 +115,41 @@ class Invitados_Model {
     })
   }
 
+  eliminar() {
+    var Id = this.Id;
+    Swal.fire({
+      title: "Invitados",
+      text: "¿Está seguro de eliminar este invitado?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        $.post(
+          "../../Controllers/invitado.controller.php?op=eliminar",
+          { Id: Id },
+          (res) => {
+            console.log(res);
+            try {
+              res = JSON.parse(res);  // Corrección aquí
+              if (res === "ok") {
+                Swal.fire("Invitados", "Invitado Eliminado", "success");
+                todos();
+              } else {
+                Swal.fire("Error", res, "error");
+              }
+            } catch (error) {
+              console.error("Error al parsear JSON:", error);
+            }
+          }
+        );
+      }
+    });
+  }
+  
+
   limpia_Cajas(){
     document.getElementById("Cedula").value = "";
     document.getElementById("Nombres").value = "";  

@@ -29,6 +29,12 @@ var guardaryeditar = (e) => {
 
 }
 
+var eliminar=(Id)=>{
+  var eliminar = new Invitados_Model(Id, "", "", "", "", "", "", "", "eliminar");
+  eliminar.eliminar();
+}
+
+
 var algoritmo_cedula = () => {
 
   var cedula = $('#Cedula').val();
