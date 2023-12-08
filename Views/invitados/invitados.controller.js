@@ -22,18 +22,27 @@ var guardaryeditar = (e) => {
  e.preventDefault();
  var formData = new FormData($("#form_invitado")[0]);
  
+ var Id=document.getElementById("Id").value
+ console.log(Id); 
+ if(Id>0){
+  var invitados = new Invitados_Model('','','','','','','','',formData,'editar');
+  invitados.editar();
+ }else{
+  var invitados = new Invitados_Model('','','','','','','','',formData,'insertar');
+  invitados.insertar();
+ }
 
- var invitados = new Invitados_Model('','','','','','','','',formData,'insertar');
- invitados.insertar();
-
-
-}
+};
 
 var eliminar=(Id)=>{
   var eliminar = new Invitados_Model(Id, "", "", "", "", "", "", "", "eliminar");
   eliminar.eliminar();
 }
 
+var editar=(Id)=>{
+  var uno = new Invitados_Model(Id, '',  '',  '',  '',  '',  '',  '', '','',"uno");
+  uno.uno();
+}
 
 var algoritmo_cedula = () => {
 

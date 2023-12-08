@@ -12,7 +12,7 @@ switch ($_GET['op']) {
         break;
 
     case 'uno':
-        $Id = $_GET['Id'];
+        $Id = $_POST['Id'];
         $datos = array(); //defino un arreglo
         $datos = $invitado->uno($Id); //llamo al modelo de invitado e invoco al procedimiento uno y almaceno en una variable
         $uno = mysqli_fetch_assoc($datos);

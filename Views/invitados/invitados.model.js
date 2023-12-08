@@ -149,6 +149,48 @@ class Invitados_Model {
     });
   }
   
+  uno(){
+    var Id= this.Id;
+        $.post(
+      "../../Controllers/invitado.controller.php?op=uno",
+      { Id: Id },
+      (res) => {
+        console.log(res);
+        res = JSON.parse(res);
+        $("#Id").val(res.Id);
+        $("#Cedula").val(res.Cedula);
+        $("#Nombres").val(res.Nombres);
+        $("#Apellidos").val(res.Apellidos);
+        $("#Telefono").val(res.Telefono);
+        $("#Edad").val(res.Edad);
+        $("#Correo").val(res.Correo);
+
+        document.getElementById("Sexo").value = res.Sexo; //asiganr al select el valor
+      }
+    );
+    $("#Modal_invitado").modal("show"); //abrir modal
+  }
+  editar(){
+    var dato = new FormData();
+    dato = this.data;
+    $.ajax({
+      url: "../../Controllers/invitado.controller.php?op=actualizar",
+      type: "POST",
+      data: dato,
+      contentType: false,
+      processData: false,
+      success: function (res) {
+        res = JSON.parse(res);
+        if (res === "ok") {
+          Swal.fire("invitado", "Invitado Registrado", "success");
+          todos();
+        } else {
+          Swal.fire("Error", res, "error");
+        }
+      }
+    });
+    this.limpia_Cajas(); 
+  }
 
   limpia_Cajas(){
     document.getElementById("Cedula").value = "";
@@ -157,7 +199,7 @@ class Invitados_Model {
     document.getElementById("Telefono").value = "";
     document.getElementById("Edad").value = "";
     document.getElementById("Correo").value = "";
-  
+    $("#Id").val('');
     $("#Modal_invitado").modal("hide");
   }
   
