@@ -50,7 +50,7 @@ class Clase_Invitados
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "UPDATE `invitados` SET `Cedula`,`Nombres`='$Nombres',`Apellidos`='$Apellidos',`Telefono`='$Telefono',`Edad`='$Edad',`Sexo`='$Sexo',`Correo`='$Correo' WHERE `Id`='$Id'";
+            $cadena = "UPDATE `invitados` SET `Cedula`='$Cedula',`Nombres`='$Nombres',`Apellidos`='$Apellidos',`Telefono`='$Telefono',`Edad`='$Edad',`Sexo`='$Sexo',`Correo`='$Correo' WHERE `Id`='$Id'";
             $result = mysqli_query($con, $cadena);
             return 'ok';
         } catch (Throwable $th) {

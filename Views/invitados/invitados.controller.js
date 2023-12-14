@@ -23,7 +23,7 @@ var guardaryeditar = (e) => {
  var formData = new FormData($("#form_invitado")[0]);
  
  var Id=document.getElementById("Id").value
- console.log(Id); 
+ 
  if(Id>0){
   var invitados = new Invitados_Model('','','','','','','','',formData,'editar');
   invitados.editar();

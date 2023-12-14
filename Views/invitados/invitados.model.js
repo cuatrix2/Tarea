@@ -155,7 +155,7 @@ class Invitados_Model {
       "../../Controllers/invitado.controller.php?op=uno",
       { Id: Id },
       (res) => {
-        console.log(res);
+      
         res = JSON.parse(res);
         $("#Id").val(res.Id);
         $("#Cedula").val(res.Cedula);

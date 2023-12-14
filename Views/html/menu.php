@@ -31,7 +31,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="invitados/invitados.php"  target="base" aria-expanded="false">
                 <span>
-                  <i class="ti ti-table"></i>
+                  <i class="ti ti-user"></i>
                 </span>
                 <span class="hide-menu">Invitados</span>
               </a>

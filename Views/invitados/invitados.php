@@ -10,7 +10,7 @@
             <div class="card-body p-4">
                 <h5 class="card-title fw-semibold mb-4">Lista de invitados</h5>
 
-                <div class="table-responsive">
+                <div class="table-responsive-lg">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_invitado">
                         Nuevo Invitado
                     </button>
